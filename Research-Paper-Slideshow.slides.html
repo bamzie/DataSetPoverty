@@ -14634,12 +14634,24 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section>
+<div class="slides"><aside class="notes">
+
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Introduction/Background">Introduction/Background<a class="anchor-link" href="#Introduction/Background">&#182;</a></h3><p>Poverty is one of the greatest concerns that the United States is currently faced with. This issue is often defined as a household or community lacking the necessary finances, resources, or even shelter. However, there are many underlying factors that add further complexity to the topic at hand. With this project, we aimed to distinguish the ethnic and social groups that are below the poverty line in each of our home states over time, California and Minnesota. The motivation of this paper and data stems from our own communities, backgrounds, and experiences as children. Our asperities and empirical accounts in underprivileged communities inspired us to analyze this data from an objective, wide-scale perspective.</p>
+<p>Poverty is one of the greatest concerns that the United States is currently faced with. This issue is often defined as a household or community lacking the necessary finances, resources, or even shelter. However, there are many underlying factors that add further complexity to the topic at hand. With this project, we aimed to distinguish the ethnic and social groups that are below the poverty line in each of our home states over time, California and Minnesota. The motivation of this paper and data stems from our own communities, backgrounds, and experiences as children. Our asperities and empirical accounts in underprivileged communities inspired us to analyze this data from an objective, wide-scale perspective.</p>
 <p>With the definition of poverty often varying from person to person, we will be following the U. S Census Bureau’s measurement of poverty which establishes a threshold using household income through earnings, child support, educational assistance, and others. In the table below, the thresholds are the same throughout the United States but the measurement of needs varies depending on the family’s size and the age of their members. Additionally, to help understand the history of poverty measures, further information can be found on the Census Bureau’s website.</p>
 
+</div>
+</div>
+</aside><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Conceptualizing-Poverty">Conceptualizing Poverty<a class="anchor-link" href="#Conceptualizing-Poverty">&#182;</a></h1><h3 id="By-Kevin-Dang-and-Brian-Morales">By Kevin Dang and Brian Morales<a class="anchor-link" href="#By-Kevin-Dang-and-Brian-Morales">&#182;</a></h3>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Introduction/Background">Introduction/Background<a class="anchor-link" href="#Introduction/Background">&#182;</a></h2><h3 id="Why-is-it-important-to-us?">Why is it important to us?<a class="anchor-link" href="#Why-is-it-important-to-us?">&#182;</a></h3><h3 id="How-did-we-obtain-our-data?">How did we obtain our data?<a class="anchor-link" href="#How-did-we-obtain-our-data?">&#182;</a></h3>
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14891,7 +14903,7 @@ The following object is masked from ‘package:dplyr’:
 </aside></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Method-and-Results">Method and Results<a class="anchor-link" href="#Method-and-Results">&#182;</a></h3>
+<h2 id="Method-and-Results">Method and Results<a class="anchor-link" href="#Method-and-Results">&#182;</a></h2><h3 id="Cleaning-Process">Cleaning Process<a class="anchor-link" href="#Cleaning-Process">&#182;</a></h3><h3 id="What-methods-did-we-use?">What methods did we use?<a class="anchor-link" href="#What-methods-did-we-use?">&#182;</a></h3><h3 id="What-were-the-results?">What were the results?<a class="anchor-link" href="#What-were-the-results?">&#182;</a></h3>
 </div>
 </div><aside class="notes">
 
@@ -20285,40 +20297,6 @@ wl4RZfJ3ZwAAAABJRU5ErkJggg=="
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Percentage-of-People-in-Poverty">Percentage of People in Poverty<a class="anchor-link" href="#Percentage-of-People-in-Poverty">&#182;</a></h3>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Histogram of % of population that are in poverty (by county)</span>
-<span class="n">plot3</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">minn_poverty</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">minn_poverty</span><span class="o">$</span><span class="n">names</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">minn_poverty</span><span class="o">$</span><span class="n">poverty_2019</span><span class="p">,</span>
-                                 <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">))</span> <span class="o">+</span>
-    <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;grey3&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.6</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#39;identity&#39;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span> 
-    <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;coral3&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Percentage of People in Poverty&quot;</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="nf">labs</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;%&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Minnesota&#39;s Percentage of People in Poverty (2019)&quot;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">));</span>
-
-<span class="c1">#Histogram of % of population that are in poverty (by county)</span>
-<span class="n">plot6</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">caPov19</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">caPov19</span><span class="o">$</span><span class="n">name</span><span class="p">,</span> <span class="n">caPov19</span><span class="o">$</span><span class="n">poverty_2019</span><span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">))</span> <span class="o">+</span> 
-<span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.6</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#39;identity&#39;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;darkorchid1&quot;</span><span class="p">))</span> <span class="o">+</span> 
-<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span>
-<span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Percentage of People in Poverty&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">labs</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span> 
-<span class="nf">labs</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;%&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;California&#39;s Percentage of People in Poverty (2019)&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">120000</span><span class="p">,</span><span class="m">10000</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -26214,43 +26192,6 @@ JCABCUhAAhKQgAQkIAEJSEACjU7g/wGAdrOlA4XFrgAAAABJRU5ErkJggg=="
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Percentage-Under-18-in-Poverty">Percentage Under 18 in Poverty<a class="anchor-link" href="#Percentage-Under-18-in-Poverty">&#182;</a></h3>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Plot for Minnesota&#39;s % under 18 who are in poverty</span>
-<span class="n">plot2</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">minn_poverty</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">minn_poverty</span><span class="o">$</span><span class="n">names</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">minn_poverty</span><span class="o">$</span><span class="n">poverty_under_18_2019</span><span class="p">,</span>
-                                 <span class="n">fill</span> <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">))</span> <span class="o">+</span>
-    <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;grey3&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.6</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#39;identity&#39;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span> 
-    <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#69b3a2&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Percentage of Poverty Under 18&quot;</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="nf">labs</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;%&quot;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Minnesota&#39;s Percentage Under 18 by County (2019)&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span> <span class="o">+</span>
-    <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">));</span>
-
-
-
-
-<span class="c1">#Plot 2019 for California&#39;s % under 18 in poverty </span>
-<span class="n">plot5</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">ca</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">ca</span><span class="o">$</span><span class="n">name</span><span class="p">,</span> <span class="n">caPov19</span><span class="o">$</span><span class="n">poverty_2019</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">))</span> <span class="o">+</span> 
-<span class="nf">geom_histogram</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;steelblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.6</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#39;identity&#39;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;#69b3a2&quot;</span><span class="p">))</span> <span class="o">+</span> 
-<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">))</span> <span class="o">+</span>
-<span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Percentage of Poverty Under 18&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">labs</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;County&quot;</span><span class="p">)</span> <span class="o">+</span> 
-<span class="nf">labs</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&quot;%&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;California&#39;s Percentage Under 18 by County (2019)&quot;</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -44758,7 +44699,7 @@ CBAgQIAAAQIECBAgQIAAgdwL/H8h64Ae8aC7bgAAAABJRU5ErkJggg=="
 </aside></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><h3 id="What-did-we-learn?">What did we learn?<a class="anchor-link" href="#What-did-we-learn?">&#182;</a></h3><h3 id="How-can-we-extend-our-research?">How can we extend our research?<a class="anchor-link" href="#How-can-we-extend-our-research?">&#182;</a></h3>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
